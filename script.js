@@ -18,7 +18,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function userInfo() {
-  // var text;
   var length = parseInt(prompt('Enter your desired lenght of your password.'));
     if (length < 8 || length > 128) {
       alert('You must choose lenght between 8-128.');
@@ -29,7 +28,10 @@ function userInfo() {
       return null;
     }
   var confirmLower = confirm('Do you want lowercase characters in your password?');
-  // add remaing confirms
+  var confirmUpper = confirm('Do you want uppercase characters in your password?');
+  var confirmNumeric = confirm('Do you want numeric characters in your password?');
+  var confirmSpecial = confirm('Do you want special characters in your password?');
+ 
   if (confirmLower === false) {
     alert('You must choose atleast one special character.');
     return null;
