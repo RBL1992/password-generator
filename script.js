@@ -32,8 +32,8 @@ function userInfo() {
   var confirmNumeric = confirm('Do you want numeric characters in your password?');
   var confirmSpecial = confirm('Do you want special characters in your password?');
  
-  if (confirmLower === false) {
-    alert('You must choose atleast one special character.');
+  if (confirmLower === false && confirmUpper === false && confirmNumeric === false && confirmSpecial === false) {
+    alert('You must choose atleast one unique character.');
     return null;
   }
   // creating object to hold user input
